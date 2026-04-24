@@ -20,11 +20,15 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -33,6 +37,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -983,6 +988,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .bg-glow {
+        filter: blur(80px);
+        animation: none;
+        opacity: 0.2;
+    }
+    
+    .glow-border::before {
+        animation: none;
+        background-position: 0 0;
+    }
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -1030,7 +1046,8 @@ footer {
     }
     
     .main-card {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
     }
     
     .float-card-1, .float-card-2 {
@@ -1038,8 +1055,8 @@ footer {
     }
     
     .circle-graphic {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
     
     .benefits {
