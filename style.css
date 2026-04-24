@@ -351,6 +351,12 @@ ul {
 .hero-visual {
     position: relative;
     height: 500px;
+    /* Tambahan background foto */
+    background-image: url('assets/foto-background.jpg'); /* Nanti masukkan foto Anda ke folder assets dan sesuaikan namanya */
+    background-size: cover; /* Agar foto memenuhi seluruh area seluas bagian ini */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px; /* Opsional: membuat sudut agak membulat */
 }
 
 .visual-card {
