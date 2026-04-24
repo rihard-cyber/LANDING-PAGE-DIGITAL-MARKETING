@@ -45,6 +45,19 @@ a {
     color: inherit;
 }
 
+/* Hover glow effect for text */
+h1, h2, h3, h4, h5, h6, p, a, span, li, strong, .text-gradient {
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, a:not(.btn):hover, li:hover, strong:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px var(--accent-2), 0 0 30px var(--accent-1);
+}
+
+.text-gradient:hover {
+    text-shadow: 0 0 15px var(--accent-1), 0 0 25px var(--accent-2);
+}
+
 ul {
     list-style: none;
 }
